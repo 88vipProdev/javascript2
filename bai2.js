@@ -1,3 +1,14 @@
+  Array.prototype.some2= function (callback){
+    for (var index in this ){
+        if(this.hasOwnProperty(index))
+            {
+                if(callback(this[index], index , this )){
+                    return true;
+                }
+            }
+    }
+    return false
+  }
 var courses = [
     {
         name: 'javascript',
